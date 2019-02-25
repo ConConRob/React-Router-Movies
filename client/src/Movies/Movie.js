@@ -32,10 +32,10 @@ export default class Movie extends Component {
   //   }
   // }
 
-  // saveMovie = () => {
-  //   const addToSavedList = this.props.addToSavedList;
-  //   addToSavedList(this.state.movie)
-  // }
+  saveMovie = () => {
+    const addToSavedList = this.props.addToSavedList;
+    addToSavedList(this.state.movie)
+  }
 
   render() {
     if (!this.state.movie) {
@@ -50,7 +50,7 @@ export default class Movie extends Component {
           director={director}
           metascore={metascore}
           stars={stars} /> 
-        <div className="save-button">Save</div>
+        <div onClick={this.saveMovie} className="save-button">Save</div>
       </div>
     );
   }
