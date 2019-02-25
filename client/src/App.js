@@ -15,6 +15,7 @@ export default class App extends Component {
   addToSavedList = movie => {
     const savedList = this.state.savedList;
     savedList.push(movie);
+    console.log(savedList)
     this.setState({ savedList });
   };
 
